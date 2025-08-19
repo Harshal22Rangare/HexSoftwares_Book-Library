@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Responsive Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- css file -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+
+    <!-- ======== NAVIGATION BAR ======== -->
+    <header class="header">
+        <a href="Home.html" class="logo">
+            <img src="assets/img/logo.png" alt="Readon Logo"
+                style="height:40px;vertical-align:middle;display:inline-block;margin-right:0.5rem;">
+            Readon
+        </a>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>
+            <a href="Categories.html">Categories</a>
+            <a href="Featured-books.html">Featured Books</a>
+            <a href="Borrowing-history.html">Borrowing History</a>
+            <a href="Testimonials.html">Testimonials</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-shopping-cart" id="cart-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+    </header>
+
+    <!-- ======== HERO SECTION ======== -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h2>Welcome to Readon</h2>
+            <p>Explore trending, new arrivals, and your favorite genres all in one place.</p>
+            <a href="Categories.html" class="btn">Browse Books</a>
+        </div>
+    </section>
+
+    <!-- ======== Trending Now (Autoscroll Carousel) ======== -->
+    <section class="book-listing-section">
+        <div class="section-header">
+            <h2>Trending Now</h2>
+            <a href="Featured-books.html" class="view-all-btn">View All</a>
+        </div>
+        <div class="trending-carousel" style="position:relative;">
+            <button class="carousel-btn left" id="trendingLeftBtn"
+                style="position:absolute;left:-2.5rem;top:50%;transform:translateY(-50%);z-index:2;background:#5D3FD3;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;box-shadow:0 2px 8px rgba(44,44,44,0.10);">&#8592;</button>
+            <div class="carousel-track" id="trendingTrack" style="display:flex;overflow:hidden;gap:2rem;width:100%;">
+                <div class="book-card" data-genre="fiction" style="flex:1 0 0;min-width:0;">
+                    <img src="assets/img/image-6.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Guns, Germs, and Steel</h3>
+                        <p>Jared Diamond</p>
+                        <div class="price">₹650</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="self-help" style="flex:1 0 0;min-width:0;">
+                    <img src="assets/img/image-10.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Atomic Habits</h3>
+                        <p>James Clear</p>
+                        <div class="price">₹499</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="fiction" style="flex:1 0 0;min-width:0;">
+                    <img src="assets/img/image-12.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Think And Grow Rich</h3>
+                        <p>Napoleon Hill</p>
+                        <div class="price">₹450</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="romance" style="flex:1 0 0;min-width:0;">
+                    <img src="assets/img/image-9.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>7 Habits</h3>
+                        <p>Stephen R. Covey</p>
+                        <div class="price">₹525</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="history" style="flex:1 0 0;min-width:0;">
+                    <img src="assets/img/image-5.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Sapiens</h3>
+                        <p>Yuval Noah Harari</p>
+                        <div class="price">₹700</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="mystery" style="flex:1 0 0;min-width:0;">
+                    <img src="assets/img/image-18.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Gone Girl</h3>
+                        <p>Gillian Flynn</p>
+                        <div class="price">₹700</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="history" style="flex:1 0 0;min-width:0;">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=600" alt="Book">
+                    <div class="book-info">
+                        <h3>Guns, Germs, and Steel</h3>
+                        <p>Jared Diamond</p>
+                        <div class="price">₹650</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="fiction" style="flex:1 0 0;min-width:0;">
+                    <img src="https://images.unsplash.com/photo-1588857388319-3548e245a463?w=600" alt="Book">
+                    <div class="book-info">
+                        <h3>Dune</h3>
+                        <p>Frank Herbert</p>
+                        <div class="price">₹850</div>
+                        <button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right" id="trendingRightBtn"
+                style="position:absolute;right:-2.5rem;top:50%;transform:translateY(-50%);z-index:2;background:#5D3FD3;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;box-shadow:0 2px 8px rgba(44,44,44,0.10);">&#8594;</button>
+        </div>
+    </section>
+
+    <!-- ======== PROMOTIONAL BANNER ======== -->
+    <section class="promo-banner">
+        <div class="promo-content">
+            <h2>Exclusive Winter Sale!</h2>
+            <p>Get up to 40% off on selected bestsellers. Limited time offer!</p>
+            <a href="#" class="btn">Shop The Sale</a>
+        </div>
+    </section>
+
+
+    <!-- ======== New Arrivals (Autoscroll + Manual) ======== -->
+    <section class="book-listing-section">
+        <div class="section-header">
+            <h2>New Arrivals</h2>
+            <a href="Featured-books.html" class="view-all-btn">View All</a>
+        </div>
+        <div class="new-arrivals-grid"
+            style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:2rem;">
+            <div class="book-card" data-genre="self-help">
+                <img src="assets/img/image-10.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>Atomic Habits</h3>
+                    <p>James Clear</p>
+                    <div class="price">₹499</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="history">
+                <img src="assets/img/image-6.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>Guns, Germs, and Steel</h3>
+                    <p>Jared Diamond</p>
+                    <div class="price">₹650</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="romance">
+                <img src="assets/img/image-16.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>Outlander</h3>
+                    <p>Diana Gabaldon</p>
+                    <div class="price">₹520</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="mystery">
+                <img src="assets/img/image-18.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>Gone Girl</h3>
+                    <p>Gillian Flynn</p>
+                    <div class="price">₹700</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="self-help">
+                <img src="assets/img/image-12.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>Think And Grow Rich</h3>
+                    <p>Napoleon Hill</p>
+                    <div class="price">₹450</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="fiction">
+                <img src="assets/img/image-4.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>The Catcher in the Rye</h3>
+                    <p>J.D. Salinger</p>
+                    <div class="price">₹350</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="romance">
+                <img src="assets/img/image-13.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>Pride And Prejudice</h3>
+                    <p>Jane Austen</p>
+                    <div class="price">₹599</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+            <div class="book-card" data-genre="mystery">
+                <img src="assets/img/image-19.jpg" alt="Book">
+                <div class="book-info">
+                    <h3>The Da Vinci Code</h3>
+                    <p>Dan Brown</p>
+                    <div class="price">₹650</div>
+                    <button class="btn buy-btn-main">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Banner -->
+    <section class="newsletter-banner">
+        <div class="newsletter-content">
+
+            <div class="newsletter-info">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive updates, offers, and book recommendations delivered to your inbox. Join our community
+                    and never miss a story!</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email" required />
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== Testimonials Section  ======== -->
+    <section id="testimonials" class="testimonials section light-background">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Testimonials</h2>
+
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-list" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <div class="testimonial-card">
+                    <div class="testimonial-item">
+                        <p><i class="fa fa-quote-left quote-icon-left"></i><span>“Harshal is a quick learner and a
+                                reliable team player. During our project, he not only completed his tasks on time
+                                but also supported others whenever needed. His coding skills and positive attitude
+                                make him a valuable asset to any team.”</span><i
+                                class="fa fa-quote-right quote-icon-right"></i>
+                        </p>
+                        <img src="assets/img/testimonials-1.jpg" class="testimonial-img" alt="">
+                        <h3>Priya Mehra</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-item">
+                        <p><i class="fa fa-quote-left quote-icon-left"></i><span>Harshal completed our website
+                                redesign project in record time. He brought fresh ideas and ensured the site was
+                                mobile-friendly and fast. I would highly recommend him for any web development
+                                work.</span><i class="fa fa-quote-right quote-icon-right"></i>
+                        </p>
+                        <img src="assets/img/testimonials-2.jpg" class="testimonial-img" alt="">
+                        <h3>Anjali Verma</h3>
+                        <h4>Designer</h4>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-item">
+                        <p><i class="fa fa-quote-left quote-icon-left"></i><span>“I had the pleasure of working with
+                                Harshal on a web development project. He handled the frontend design with creativity
+                                and precision. His attention to detail and responsiveness were impressive throughout
+                                the process.”</span><i class="fa fa-quote-right quote-icon-right"></i>
+                        </p>
+                        <img src="assets/img/testimonials-3.jpg" class="testimonial-img" alt="">
+                        <h3>Suresh Nair</h3>
+                        <h4>Store Owner</h4>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-item">
+                        <p><i class="fa fa-quote-left quote-icon-left"></i><span> “We were impressed by Harshal’s
+                                dedication and discipline. Even as a fresher, he showed professionalism and clarity
+                                in communication that’s rare. He’s a promising developer with a bright
+                                future.”</span><i class="fa fa-quote-right quote-icon-right"></i>
+                        </p>
+                        <img src="assets/img/testimonials-4.jpg" class="testimonial-img" alt="">
+                        <h3>Neha Joshi</h3>
+                        <h4>Founder</h4>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-item">
+                        <p><i class="fa fa-quote-left quote-icon-left"></i><span>“Harshal has a great understanding
+                                of JavaScript and React. His ability to understand requirements quickly and deliver
+                                clean, efficient code made our collaboration smooth and effective.”</span><i
+                                class="fa fa-quote-right quote-icon-right"></i>
+                        </p>
+                        <img src="assets/img/testimonials-5.jpg" class="testimonial-img" alt="">
+                        <h3>Ravi Sharma</h3>
+                        <h4>Entrepreneur</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======== Footer ======== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col"><img src="assets/img/logo.png" alt="">
+                <h3>Readon</h3>
+                <p>Your one-stop destination for buying books. Dive into a world of stories.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Categories.html">Categories</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Nagpur, Maharashtra, India</p>
+                <p><i class="fas fa-envelope"></i> Readon123@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                            class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; HR 2025 Readon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ======== Modals ======== -->
+    <div class="modal-overlay" id="search-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Search for Books</h2>
+            <form class="modal-form">
+                <input type="search" id="search-input-field" placeholder="Enter book title or author...">
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="search-results"></div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-content">
+                <p>Your cart is currently empty.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login or Register</h2>
+            <form class="modal-form">
+                <input type="email" placeholder="Your Email" required>
+                <input type="password" placeholder="Your Password" required>
+                <button type="submit" class="btn">Login</button>
+                <p class="form-text">Don't have an account? <a href="#">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Book Details Modal -->
+    <div class="modal-overlay" id="book-details-modal">
+        <div class="modal-content book-details-content">
+            <span class="close-btn">&times;</span>
+            <div class="book-details-layout">
+                <div class="book-details-img"><img src="" alt="Book Cover"></div>
+                <div class="book-details-info">
+                    <h2 id="modal-book-title"></h2>
+                    <p id="modal-book-author"></p>
+                    <div class="price" id="modal-book-price"></div>
+                    <p class="book-description">A gripping tale of suspense and intrigue. (Demo text)</p>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" value="1" min="1">
+                    </div>
+                    <div class="modal-buttons">
+                        <button class="btn" id="modal-buy-btn">Buy Now</button>
+                        <button class="btn btn-secondary" id="modal-borrow-btn">Borrow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js file -->
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

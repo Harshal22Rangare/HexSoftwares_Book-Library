@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Responsive Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- css file -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+    <!-- ======== NAVIGATION BAR ======== -->
+    <header class="header">
+        <a href="Home.html" class="logo">
+            <img src="assets/img/logo.png" alt="Readon Logo"
+                style="height:40px;vertical-align:middle;display:inline-block;margin-right:0.5rem;">
+            Readon
+        </a>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>
+            <a href="Categories.html">Categories</a>
+            <a href="Featured-books.html">Featured Books</a>
+            <a href="Borrowing-history.html">Borrowing History</a>
+            <a href="Testimonials.html">Testimonials</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-shopping-cart" id="cart-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+    </header>
+
+    <!-- ======== Page Header ======== -->
+    <main class="page-container">
+        <div class="page-header">
+            <h1>Our Featured Collection</h1>
+            <p>A curated list of must-read books handpicked by our experts.</p>
+        </div>
+        <section class="featured-books-grid">
+            <div class="book-grid" style="grid-template-columns:repeat(4,1fr);gap:2rem;">
+                
+                <!-- Fiction books -->
+                <div class="book-card" data-genre="fiction">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-1.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>To kill a Mockingbird</h3>
+                        <p>Harper Lee</p>
+                        <div class="price">₹480</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="fiction">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-2.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>1984</h3>
+                        <p>George Orwell</p>
+                        <div class="price">₹850</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="fiction">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-3.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Great Gatsby</h3>
+                        <p>F. Scott Fitzgerald</p>
+                        <div class="price">₹400</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="fiction">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-4.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Catcher in the Rye</h3>
+                        <p>J.D. Salinger</p>
+                        <div class="price">₹350</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- History books -->
+                <div class="book-card" data-genre="history">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-5.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Sapiens</h3>
+                        <p>Yuval Noah Harari</p>
+                        <div class="price">₹700</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="history">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-6.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Guns, Germs, and Steel</h3>
+                        <p>Jared Diamond</p>
+                        <div class="price">₹650</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="history">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-7.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Silk Roads</h3>
+                        <p>Peter Frankopan</p>
+                        <div class="price">₹600</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="history">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-8.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Diary of a Young Girl</h3>
+                        <p>Anne Frank</p>
+                        <div class="price">₹800</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Self-help books -->
+                <div class="book-card" data-genre="self-help">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-9.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>7 Habits</h3>
+                        <p>Stephen R. Covey</p>
+                        <div class="price">₹525</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="self-help">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-10.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Atomic Habits</h3>
+                        <p>James Clear</p>
+                        <div class="price">₹499</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="self-help">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-11.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>How to Win Friends</h3>
+                        <p>Dale Carnegie</p>
+                        <div class="price">₹399</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="self-help">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-12.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Think And Grow Rich</h3>
+                        <p>Napoleon Hill</p>
+                        <div class="price">₹450</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Romance books -->
+                <div class="book-card" data-genre="romance">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-13.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Pride and Prejudice</h3>
+                        <p>Jane Austen</p>
+                        <div class="price">₹599</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="romance">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-14.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Fault in Our Stars</h3>
+                        <p>John Green</p>
+                        <div class="price">₹550</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="romance">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-15.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Me Before You</h3>
+                        <p>Jojo Moyes</p>
+                        <div class="price">₹600</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="romance">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-16.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Outlander</h3>
+                        <p>Diana Gabaldon</p>
+                        <div class="price">₹520</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Mystery books -->
+                <div class="book-card" data-genre="mystery">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-17.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Girl with the Dragon Tattoo</h3>
+                        <p>Stieg Larsson</p>
+                        <div class="price">₹630</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="mystery">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-18.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Gone Girl</h3>
+                        <p>Gillian Flynn</p>
+                        <div class="price">₹700</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="mystery">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-19.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>The Da Vinci Code</h3>
+                        <p>Dan Brown</p>
+                        <div class="price">₹650</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+                <div class="book-card" data-genre="mystery">
+                    <div class="discount-tag">20% OFF</div>
+                    <img src="assets/img/image-20.jpg" alt="Book">
+                    <div class="book-info">
+                        <h3>Murder on the Orient Express</h3>
+                        <p>Agatha Christie</p>
+                        <div class="price">₹600</div><button class="btn buy-btn-main">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======== Footer ======== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col"><img src="assets/img/logo.png" alt="">
+                <h3>Readon</h3>
+                <p>Your one-stop destination for buying books. Dive into a world of stories.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Categories.html">Categories</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Nagpur, Maharashtra, India</p>
+                <p><i class="fas fa-envelope"></i> Readon123@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                            class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; HR 2025 Readon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ======== Modals ======== -->
+    <div class="modal-overlay" id="search-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Search for Books</h2>
+            <form class="modal-form">
+                <input type="search" id="search-input-field" placeholder="Enter book title or author...">
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Book Details Modal -->
+    <div class="modal-overlay" id="book-details-modal">
+        <div class="modal-content book-details-content">
+            <span class="close-btn">&times;</span>
+            <div class="book-details-layout">
+                <div class="book-details-img"><img src="" alt="Book Cover"></div>
+                <div class="book-details-info">
+                    <h2 id="modal-book-title"></h2>
+                    <p id="modal-book-author"></p>
+                    <div class="price" id="modal-book-price"></div>
+                    <p class="book-description">A gripping tale of suspense and intrigue. (Demo text)</p>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" value="1" min="1">
+                    </div>
+                    <div class="modal-buttons">
+                        <button class="btn" id="modal-buy-btn">Buy Now</button>
+                        <button class="btn btn-secondary" id="modal-borrow-btn">Borrow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js file -->
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

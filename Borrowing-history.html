@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Responsive Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- css file -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body class="borrowing-history-page">
+    <!-- ======== NAVIGATION BAR ======== -->
+    <header class="header">
+        <a href="Home.html" class="logo">
+            <img src="assets/img/logo.png" alt="Readon Logo"
+                style="height:40px;vertical-align:middle;display:inline-block;margin-right:0.5rem;">
+            Readon
+        </a>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>
+            <a href="Categories.html">Categories</a>
+            <a href="Featured-books.html">Featured Books</a>
+            <a href="Borrowing-history.html">Borrowing History</a>
+            <a href="Testimonials.html">Testimonials</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-shopping-cart" id="cart-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+    </header>
+
+    <!-- ======== Page Header ======== -->
+    <main class="page-container">
+        <div class="page-header">
+            <h1>Borrowing History</h1>
+            <p>Here are all the books you have bought or borrowed.</p>
+        </div>
+
+        <div class="history-tabs" style="display:flex;gap:2rem;margin-bottom:2rem;">
+            <button id="showBuyTab" class="btn" style="background:#5D3FD3;">Buy History</button>
+            <button id="showBorrowTab" class="btn btn-secondary">Borrow History</button>
+        </div>
+
+        <div id="buy-history-table-container">
+            <h3>Buy History</h3>
+            <table id="buy-history-table" style="width:100%;border-collapse:collapse;">
+                <thead>
+                    <tr style="background:#f5f7fa;">
+                        <th>Book Cover</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Buy Date</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="borrow-history-table-container" style="display:none;">
+            <h3>Borrow History</h3>
+            <table id="borrow-history-table" style="width:100%;border-collapse:collapse;">
+                <thead>
+                    <tr style="background:#f5f7fa;">
+                        <th>Book Cover</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Borrow Date</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- ======== Footer ======== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col"><img src="assets/img/logo.png" alt="">
+                <h3>Readon</h3>
+                <p>Your one-stop destination for buying books. Dive into a world of stories.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Categories.html">Categories</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Nagpur, Maharashtra, India</p>
+                <p><i class="fas fa-envelope"></i> Readon123@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                            class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; HR 2025 Readon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ======== Modals ======== -->
+    <div class="modal-overlay" id="search-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Search for Books</h2>
+            <form class="modal-form">
+                <input type="search" id="search-input-field" placeholder="Enter book title or author...">
+                <button type="submit" class="btn">Search</button>
+            </form>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const borrowedBooksContainer = document.getElementById('borrowed-books-container');
+
+            // Fetch borrowed books from localStorage (Demo storage)
+            let borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
+
+            function renderBorrowedBooks() {
+                borrowedBooksContainer.innerHTML = '';
+                if (borrowedBooks.length === 0) {
+                    borrowedBooksContainer.innerHTML = '<p style="text-align:center;">No borrowed books yet.</p>';
+                    return;
+                }
+                borrowedBooks.forEach(book => {
+                    const bookCard = document.createElement('div');
+                    bookCard.classList.add('book-card');
+                    bookCard.innerHTML = `
+                <img src="${book.imgSrc}" alt="Book">
+                <div class="book-info">
+                    <h3>${book.title}</h3>
+                    <p>${book.author}</p>
+                    <div class="price">₹${book.price}</div>
+                    <div>Quantity: ${book.quantity}</div>
+                    <div>Borrowed on: ${book.borrowDate}</div>
+                    <button class="btn buy-btn-main" onclick="buyBook('${book.title}')">Buy Now</button>
+                </div>
+            `;
+                    borrowedBooksContainer.appendChild(bookCard);
+                });
+            }
+
+            
+        });
+    </script>
+
+    <!-- js file -->
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
