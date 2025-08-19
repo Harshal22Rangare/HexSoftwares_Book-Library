@@ -86,3 +86,12 @@ TASK 3 :
 
 ## OutPut :
 
+<img width="1901" height="961" alt="Image" src="https://github.com/user-attachments/assets/06477198-c4db-43ac-99b9-f826df10192f" />
+
+<img width="1901" height="966" alt="Image" src="https://github.com/user-attachments/assets/417f7d8a-a963-46e1-a273-052c851851c2" />
+
+<img width="1896" height="968" alt="Image" src="https://github.com/user-attachments/assets/4f41896b-5e93-47cb-b8a4-d3a3230f706a" />
+
+<img width="1898" height="968" alt="Image" src="https://github.com/user-attachments/assets/e26b2eec-d907-4557-b886-36f1cc63ade7" />
+
+<img width="1906" height="965" alt="Image" src="https://github.com/user-attachments/assets/51659456-39ce-4ec8-923b-506b345cc618" />
